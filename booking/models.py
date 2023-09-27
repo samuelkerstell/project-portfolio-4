@@ -21,19 +21,20 @@ GUEST_CAPACITY = (
 
 
 # Create your models here.
-class Customer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    email = models.EmailField()
+#class Customer(models.Model):
+#    user = models.OneToOneField(User, on_delete=models.CASCADE)
+#    email = models.EmailField()
 
-    def __str__(self):
-        return self.user.get_full_name() if self.user.get_full_name() else self.user.username
+#    def __str__(self):
+#        return self.user.get_full_name() if self.user.get_full_name() else self.user.username
 
 
 class Booking(models.Model):
     guest = models.CharField(max_length=10, choices=GUEST_CAPACITY, default="1")
     day = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=time_options, default="09:00")
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name="bookings")
+    customer = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    email = models.EmailField(default="")
     comment = models.TextField(max_length=100, blank=True)
 
     def __str__(self):

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if success_message %}
+    <h3>{{ success_message }}</h3>
+    {% endif %}
+    <h1>Your Bookings:</h1>
+    <ul>
+        <!-- Iterate over object_list -->
+        {% for object in object_list %}
+        <!-- Display Objects -->
+        <li>{{ object.customer }}</li>
+        <li>Date: {{ object.day }}</li>
+        <li>Time: {{ object.time }}</li>
+        <li>Attendence: {{ object.guest }}</li>
+    
+        <hr/>
+        <!-- If object_list is empty  -->
+        {% empty %}
+        <li>No Bookings yet.</li>
+        {% endfor %}
+    </ul>
+
+{%endblock%}
