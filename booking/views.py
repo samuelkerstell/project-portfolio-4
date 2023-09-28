@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponseRedirect
 from .models import Booking
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.contrib import messages
+
 
 
 #class HomePage(generic.ListView):
@@ -17,8 +18,7 @@ class MakeBooking(generic.CreateView, LoginRequiredMixin):
     model = Booking
     template_name = 'index.html'
     # specify the fields to be displayed
-
-    fields = ['email', 'guest', 'day', 'time', 'comment']
+    fields = ['guests', 'day', 'time', 'comment']
     
     def form_valid(self, form):
         # Connect the booking to the logged-in user
@@ -54,3 +54,12 @@ class BookingDetails(generic.ListView, LoginRequiredMixin):
 
     def get_queryset(self):
         return Booking.objects.filter(customer=self.request.user).order_by('day', 'time')
+
+
+class DeleteBooking(generic.DeleteView):
+    model = Booking
+    success_url = "/"
+
+    template_name = "delete_booking.html"
+
+

@@ -30,7 +30,7 @@ GUEST_CAPACITY = (
 
 
 class Booking(models.Model):
-    guest = models.CharField(max_length=10, choices=GUEST_CAPACITY, default="1")
+    guests = models.CharField(max_length=10, choices=GUEST_CAPACITY, default="1")
     day = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=time_options, default="09:00")
     customer = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
