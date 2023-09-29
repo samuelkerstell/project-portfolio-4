@@ -1,39 +1,134 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Resturant
 
-Welcome,
+## Welcome!
+[View the live project here](https://project-portfolio-4-sam-335106eed664.herokuapp.com)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Description
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+![Different screen sizes]()
 
-## Codeanywhere Reminders
+# Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Existing Features
 
-`python3 -m http.server`
+* ### Header
+  * 
+  * 
+  * 
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Screenshot of the navigation bar.]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+* ### Feature 1
+  * 
+  * 
+  * 
 
-`http_server`
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Future Features
+ * ### Feature1
+    * 
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+# Testing
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## Testing User Stories
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+| `Goals` | `How Are They Achieved?` |
+| ----- | ---------------------- |
+| `First time visitors` | |
+| Understand what the website is and how to play the quiz. | The How to play container gives the user a good understanding of what the site is about. |
+| Expand their knowledge of the Premier League.  | By playing the quiz and learning from their mistakes. |
+| Convert into returning visitors.       | By providing an engaging and valuable experience. |
+| `Returning Visitors`   |
+| To come back and play more quiz. | Provide frequent updates to the quiz content, including new questions, topics, or themed quizzes. |
+| `Admin User`           |
+| Updating the quiz and difficulty.| Adding more quizzes and introducing different difficulty levels. |
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Full Testing
+Full testing was performed on the following devices:
+* PC:
+  * Desktop PC
+* Laptop:
+  * Macbook Air 2021 13.6-inch screen
+* Mobile Devices:
+  * iPhone 13
 
----
+Desktop PC tested the site using the following browsers:
+* Google Chrome
+* Opera
+* Firefox
 
-Happy coding!
+The Apple devices tested the site using the following browsers:
+* Safari
+* Google Chrome
+
+
+I've confirmed that the site is responsive and looks good on different screen sizes.
+
+| `Feature` | `Expected Outcome` | `Testing Performance` | `Result` | `Pass/Fail`|
+| ----------|--------------------|-----------------------|----------|------------|
+| `Header`  | |
+| Logo               | When clicked the user will be redirected to the Home Page  | Clicked Logo  |  Redirected to the Home Page  | Pass |
+|  | | | | |
+| `Quiz Container` |  |
+| Start Button  | When clicked user will be able to view the first question.  | Clicked on Start button   | First question shows up  | Pass |
+| Correct Answer | When clicked user will get instant feedback making the button green     | Clicked on Correct Answer  | Button turns green     | Pass |
+
+| | | | | |
+| `Score System` |
+| Correct answer | When correct answer is choosen score goes up 1 point | Choosed correct answer | Score goes up 1 point  | Pass |
+| Wrong answer | When wrong answer is choosen score stays the same | Choosed wrong answer | Score stays the same  | Pass |
+| | | | | |
+| `Result Container` |
+| Restart Button |When clicked quiz will restart | Clicked Restart Button | Quiz is restarted  | Pass |
+| | | | | |
+
+
+
+### Bugs
+* 
+
+#### Solved Bugs
+* 
+
+
+![Bugfix1]()
+
+
+## Validation Testing
+* HTML
+  * No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+* CSS
+  * No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+* JavaScript
+  * No errors were found when passing through the official [(JSHint)](https://jshint.com)
+* Accessibility
+
+![Screenshot of the Lighthouse Pagespeed]()
+
+# Technologies Used
+
+## Frameworks, Libraries & Progams Used
+  * Hover:css was used on the buttons to show a transition when hovered over.
+  * [Google Fonts](https://fonts.google.com) was used to import the 'Lilita One' font in the style.css file which is used on all text of the website.
+  * [Git](https://gitpod.io) was used for version control system to manage code changes, and the Gitpod terminal to commit those changes to Git and push them to GitHub.
+  * [GitHub](https://github.com) was used to store the project code after being pushed from gitpod.
+  * [ChatGPT](https://chat.openai.com) was used to improve copyright.
+ ## Languages Used
+ * HTML5
+ * CSS3
+ * Python3
+
+# Deployment
+* The site was deployed to GitHub pages. The steps to deploy are as follows:
+  * In the GitHub repository, navigate to the Settings tab
+  * From the source section drop-down menu, select the Master Branch
+  * Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+The live link can be found here - [Resturant](https://project-portfolio-4-sam-335106eed664.herokuapp.com)
+
+# Credits
+## Code Used
+ * 
+
+## Media
+* 

@@ -16,6 +16,9 @@
         <li>
             <button type="submit"><a href="{% url 'delete_booking' object.pk %}">Cancel Booking</a></button>
         </li>
+        <li>
+            <button type="submit"><a href="{% url 'update_booking' object.pk %}">Update Booking</a></button>
+        </li>
 
         <hr/>
         <!-- If object_list is empty  -->

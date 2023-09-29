@@ -55,11 +55,20 @@ class BookingDetails(generic.ListView, LoginRequiredMixin):
     def get_queryset(self):
         return Booking.objects.filter(customer=self.request.user).order_by('day', 'time')
 
-
+# View to delete bookings
 class DeleteBooking(generic.DeleteView):
     model = Booking
     success_url = "/"
 
     template_name = "delete_booking.html"
+
+class UpdateBooking(generic.UpdateView):
+    model = Booking
+    template_name = "update_booking.html"
+    # specify the fields to be displayed
+    fields = ['guests', 'day', 'time', 'comment']
+    
+    success_url = "/booking_details"
+
 
 

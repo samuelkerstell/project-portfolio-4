@@ -37,5 +37,8 @@ class Booking(models.Model):
     email = models.EmailField(default="")
     comment = models.TextField(max_length=100, blank=True)
 
+    class Meta():
+        unique_together = ['day', 'time']
+
     def __str__(self):
         return f"Booking for {self.customer} at {self.day} {self.time}"
