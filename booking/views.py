@@ -18,7 +18,7 @@ class MakeBooking(generic.CreateView, LoginRequiredMixin):
     model = Booking
     template_name = 'index.html'
     # specify the fields to be displayed
-    fields = ['guests', 'day', 'time', 'comment']
+    fields = ['guests', 'time', 'day', 'comment']
     
     def form_valid(self, form):
         # Connect the booking to the logged-in user
@@ -66,7 +66,7 @@ class UpdateBooking(generic.UpdateView):
     model = Booking
     template_name = "update_booking.html"
     # specify the fields to be displayed
-    fields = ['guests', 'day', 'time', 'comment']
+    fields = ['guests', 'time', 'day', 'comment']
     
     success_url = "/booking_details"
 

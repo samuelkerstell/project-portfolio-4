@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 2px;
+}
+
+
+/* --------------------------------------------------------------------------- Booking Form */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form {
+}
+
+label, button {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 4px;
+}
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+input, select {
+    padding: .2.5em;
+    border: solid 1px;
+}
+
+textarea {
+    max-height: 4em;
+    border: solid 1px;
+}

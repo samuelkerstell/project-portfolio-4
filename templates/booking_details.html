@@ -5,19 +5,19 @@
     <h3>{{ success_message }}</h3>
     {% endif %}
     <h1>Your Bookings:</h1>
-    <ul>
+    <ul class="list-group">
         <!-- Iterate over object_list -->
         {% for object in object_list %}
         <!-- Display Objects -->
-        <li>{{ object.customer }}</li>
+        <li >{{ object.customer }}</li>
         <li>Date: {{ object.day }}</li>
         <li>Time: {{ object.time }}</li>
         <li>Attendence: {{ object.guests }}</li>
         <li>
-            <button type="submit"><a href="{% url 'delete_booking' object.pk %}">Cancel Booking</a></button>
+            <button type="submit" class="btn btn-dark btn-sm"><a href="{% url 'delete_booking' object.pk %}">Cancel Booking</a></button>
         </li>
         <li>
-            <button type="submit"><a href="{% url 'update_booking' object.pk %}">Update Booking</a></button>
+            <button type="submit" class="btn btn-dark btn-sm"><a href="{% url 'update_booking' object.pk %}">Update Booking</a></button>
         </li>
 
         <hr/>

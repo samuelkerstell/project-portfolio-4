@@ -2,13 +2,15 @@
 
 {% block content %}
 <form method="POST" enctype="multipart/form-data">
-    <h3>Booking:</h3>
-    <!-- Security token -->
-    {% csrf_token %}
- 
-    <!-- Using the formset -->
-    {{ form.as_p }}
-     
-    <input type="submit" value="Submit">
+    <div class="form-group">
+        <h3 class="booking-header">Booking:</h3>
+        <!-- Security token -->
+        {% csrf_token %}
+
+        <!-- Using the formset -->
+        {{ form }}
+
+        <button type="submit" class="btn btn-dark btn-md">Submit</button>
+    </div>
 </form>
 {%endblock%}

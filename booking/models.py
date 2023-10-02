@@ -35,7 +35,7 @@ class Booking(models.Model):
     time = models.CharField(max_length=10, choices=time_options, default="09:00")
     customer = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     email = models.EmailField(default="")
-    comment = models.TextField(max_length=100, blank=True)
+    comment = models.TextField(max_length=40, blank=True)
 
     class Meta():
         unique_together = ['day', 'time']
