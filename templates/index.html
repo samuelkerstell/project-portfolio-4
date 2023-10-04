@@ -1,15 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<form method="POST" enctype="multipart/form-data">
-    <div class="form-group">
-        <h3 class="booking-header">Booking:</h3>
-        <!-- Security token -->
-        {% csrf_token %}
-
-        <!-- Using the formset -->
-        {{ form }}
-
-        <button type="submit" class="btn btn-dark btn-md">Submit</button>
-    </div>
-</form>
+<h1>Home Page</h1>
+<div class="hero-image">
+    <img src="https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+</div>
+<button type="submit" class="btn btn-dark btn-lg"><a href="{% url 'booking' %}">Booking</a></button>
 {%endblock%}

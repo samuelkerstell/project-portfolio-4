@@ -6,37 +6,43 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.contrib import messages
 from django.db import IntegrityError
+from datetime import date
 
 
 
 
-#class HomePage(generic.ListView):
-#    model = Booking
-#    template_name = 'index.html'
+class HomePage(generic.TemplateView):
+    template_name = 'index.html'
 
  
 # View to make a reservation
 class MakeBooking(generic.CreateView, LoginRequiredMixin):
     # specify the model for create view
     model = Booking
-    template_name = 'index.html'
+    template_name = 'booking_form.html'
     # specify the fields to be displayed
     fields = ['guests', 'time', 'day', 'comment']
     
     def form_valid(self, form):
+        # code altered from https://stackoverflow.com/questions/70671189/avoid-booking-past-dates-with-django
+        start_date = form.cleaned_data.get('day')
+        if start_date < date.today():
+            messages.error(self.request, 'Booking date cannot be in the past.')
+            return self.form_invalid(form)
+        
         # Connect the booking to the logged-in user
         form.instance.customer = self.request.user
         
         # Set a custom flag in the session to indicate successful confirmation
         self.request.session['booking_success'] = True
 
-        
         # Call the parent class's form_valid method to save the booking
         try:
             return super().form_valid(form)
         except IntegrityError:
-            # Redirects to the booking_error.html page
-            return HttpResponseRedirect(reverse('booking_error'))
+            # shows error message
+            messages.error(self.request, 'You already have a booking for this time.')
+            return self.form_invalid(form)
 
     def get_success_url(self):
         # Redirect to the booking details page for the newly created booking
@@ -83,9 +89,6 @@ class UpdateBooking(generic.UpdateView, LoginRequiredMixin):
     def get_queryset(self):
         return Booking.objects.filter(pk=self.kwargs['pk'], customer=self.request.user)
 
-
-class BookingError(generic.TemplateView):
-    template_name = 'booking_error.html'
 
 # Code taken from https://stackoverflow.com/questions/17662928/django-creating-a-custom-500-404-error-page
 def handler404(request, exception, template_name="404.html"):
