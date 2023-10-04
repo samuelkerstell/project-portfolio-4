@@ -20,15 +20,6 @@ GUEST_CAPACITY = (
 )
 
 
-# Create your models here.
-#class Customer(models.Model):
-#    user = models.OneToOneField(User, on_delete=models.CASCADE)
-#    email = models.EmailField()
-
-#    def __str__(self):
-#        return self.user.get_full_name() if self.user.get_full_name() else self.user.username
-
-
 class Booking(models.Model):
     guests = models.CharField(max_length=10, choices=GUEST_CAPACITY, default="1")
     day = models.DateField(default=datetime.now)
@@ -38,7 +29,7 @@ class Booking(models.Model):
     comment = models.TextField(max_length=40, blank=True)
 
     class Meta():
-        unique_together = ['day', 'time']
+        unique_together = ['day', 'time', 'customer']
 
     def __str__(self):
         return f"Booking for {self.customer} at {self.day} {self.time}"
