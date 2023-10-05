@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-<form method="POST" enctype="multipart/form-data">
-    <div class="form-group">
-        <h3 class="booking-header">Booking:</h3>
-        <!-- Security token -->
-        {% csrf_token %}
+<div class="container">
+    <div class="row">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <h3 class="booking-header">Booking:</h3>
+                <!-- Security token -->
+                {% csrf_token %}
 
-        <!-- Using the formset -->
-        {{ form }}
-        <ul class="messages">
-            {% for message in messages %}
-            <li><b style="color: red;">{{ message }}</b></li>
-            {% endfor %}
-        </ul>
-        <button type="submit" class="btn btn-dark btn-md">Submit</button>
+                <!-- Using the formset -->
+                {{ form }}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li><b class="text-danger">{{ message }}</b></li>
+                    {% endfor %}
+                </ul>
+                <button type="submit" class="btn btn-dark btn-md">Submit</button>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 {%endblock%}

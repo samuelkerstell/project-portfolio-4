@@ -1,30 +1,39 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% if success_message %}
-    <h3>{{ success_message }}</h3>
-    {% endif %}
-    <h1>Your Bookings:</h1>
-    <ul class="list-group">
-        <!-- Iterate over object_list -->
-        {% for object in object_list %}
-        <!-- Display Objects -->
-        <li >{{ object.customer }}</li>
-        <li>Date: {{ object.day }}</li>
-        <li>Time: {{ object.time }}</li>
-        <li>Attendence: {{ object.guests }}</li>
-        <li>
-            <button type="submit" class="btn btn-dark btn-sm"><a href="{% url 'delete_booking' object.pk %}">Cancel Booking</a></button>
-        </li>
-        <li>
-            <button type="submit" class="btn btn-dark btn-sm"><a href="{% url 'update_booking' object.pk %}">Update Booking</a></button>
-        </li>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <h1>Your Bookings:</h1>
+                {% if success_message %}
+                <h3 class="text-success">{{ success_message }}</h3>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row row justify-content-md-center">
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <!-- Iterate over object_list -->
+                    {% for object in object_list %}
+                    <!-- Display Objects -->
+                    <li >{{ object.customer }}</li>
+                    <li>Date: {{ object.day }}</li>
+                    <li>Time: {{ object.time }}</li>
+                    <li>Attendence: {{ object.guests }}</li>
+                    <li>
+                        <button type="submit" class="btn btn-dark btn-sm"><a href="{% url 'delete_booking' object.pk %}">Cancel Booking</a></button>
+                    </li>
+                    <li>
+                        <button type="submit" class="btn btn-dark btn-sm"><a href="{% url 'update_booking' object.pk %}">Update Booking</a></button>
+                    </li>
 
-        <hr/>
-        <!-- If object_list is empty  -->
-        {% empty %}
-        <li>No Bookings yet.</li>
-        {% endfor %}
-    </ul>
-
+                    <hr/>
+                    <!-- If object_list is empty  -->
+                    {% empty %}
+                    <li>No Bookings yet.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
 {%endblock%}

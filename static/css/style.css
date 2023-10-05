@@ -1,7 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
 body {
-    text-align: center;
+    font-family: 'Prompt', sans-serif;
     font-size: 16px;
 }
+
+/* --------------------------------------------------------------------------- Hero-Image */
+
+.bg-image {
+    background: url(https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg) no-repeat center center / cover;;
+    height: 95vh;
+}
+
+.custom-margin {
+    margin-top: 96px;
+}
+.heading {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+}
+
+/* --------------------------------------------------------------------------- Link buttons */
 
 a {
     text-decoration: none;
@@ -17,7 +39,6 @@ li {
     margin-bottom: 2px;
 }
 
-
 /* --------------------------------------------------------------------------- Booking Form */
 .form-group {
     display: flex;
@@ -25,7 +46,6 @@ li {
     align-items: center;
     justify-content: center;
 }
-
 
 form {
 }
