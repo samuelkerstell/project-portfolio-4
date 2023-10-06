@@ -1,14 +1,34 @@
 {% extends "base.html" %}
-
 {% block content %}
-<form method="POST" enctype="multipart/form-data">
-    <h3>Update Booking:</h3>
-    <!-- Security token -->
-    {% csrf_token %}
- 
-    <!-- Using the formset -->
-    {{ form.as_p }}
-     
-    <input type="submit" value="Update">
-</form>
+<div class="bg-image-booking"></div>
+<div class="container">
+    <div class="row justify-content-center flex-column flex-md-row custom-margin custom-row">
+        <div class="col-md-6 bg-white bg-gradient">
+            <form method="POST" enctype="multipart/form-data" class="m-4 form-color">
+                <h4 class="booking-header text-center">Update Booking</h4>
+                <!-- Security token -->
+                {% csrf_token %}
+
+                <!-- Using the formset -->
+                {{ form }}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li><b class="text-danger">{{ message }}</b></li>
+                    {% endfor %}
+                </ul>
+                <button type="submit" class="btn btn-dark btn-md">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-6 square bg-color text-light">
+            <div class="m-4">
+                <h4 class="booking-header text-center">Secure your table!</h4>
+                <p class="form-p">Whether it's a casual lunch or a special occasion, we've got a seat waiting just for you. 
+                    Choose the number of guests, preferred time, and date, and feel free to let us know if you 
+                    have any special requests or dietary preferences.<br><br> We can't wait to serve you! - <span class="brand">S<span class="red-o">A</span>M<span
+                    class="thin"><i class="fas fa-hamburger"></i>burger</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 {%endblock%}

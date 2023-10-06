@@ -59,27 +59,36 @@ li {
 
 /* --------------------------------------------------------------------------- Booking Form */
 form {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
 
+.form-color {
+    color: #301606;
+}
+
+.booking-header {
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.custom-row {
+    border: 12px solid #301606;
+    border-radius: 12px;
 }
 
 .form-p {
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: 2px;
-    padding: 36px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-top: 1%;
+    padding-left: 1.5em;
 }
 
 label, button {
     display: block;
     margin-top: 1em;
     margin-bottom: 4px;
-    font-size: 20px;
 }
 
 label:first-of-type {
@@ -103,3 +112,19 @@ select {
 input, textarea {
     width: 100%;
 }
+
+.bg-color {
+    background-color: #301606;
+}
+
+/* --------------------------------------------------------------------------- Menu */
+.burger {
+    font-size: 170%;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.ingredients {
+    font-weight: 600;
+}
+

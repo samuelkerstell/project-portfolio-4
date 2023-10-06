@@ -1,12 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-{% if object.customer == user %}
-    <form method="post">
-    {% csrf_token %}
-        <p>Are you sure you want to delete "{{ object }}"?</p>
-        <button type="submit" class="btn btn-dark btn-sm">Confirm</button>
-    </form>
-{% else %}
-    <p>You do not have permission to delete this booking.</p>
-{% endif %}
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="col-md-6 text-center">
+            {% if object.customer == user %}
+            <form method="post">
+            {% csrf_token %}
+                <p>Are you sure you want to delete "{{ object }}"?</p>
+                <button type="submit" class="btn btn-dark btn-sm">Confirm</button>
+            </form>
+            {% else %}
+                <p>You do not have permission to delete this booking.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {%endblock%}
