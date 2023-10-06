@@ -5,16 +5,6 @@ body {
     font-size: 16px;
 }
 
-/* --------------------------------------------------------------------------- Hero-Image */
-
-.bg-image {
-    background: url(https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg) no-repeat center center / cover;;
-    height: 95vh;
-}
-
-.custom-margin {
-    margin-top: 96px;
-}
 .heading {
     font-size: 48px;
     font-weight: 700;
@@ -23,8 +13,36 @@ body {
 
 }
 
-/* --------------------------------------------------------------------------- Link buttons */
+.custom-margin {
+    margin-top: 116px;
+}
 
+/* --------------------------------------------------------------------------- Images */
+
+
+.bg-image {
+    background: url(https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg) no-repeat center center / cover;
+    height: 95vh;
+}
+
+.bg-image-booking {
+    padding: 0;
+    background: url(
+        https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center center / cover;
+    background-attachment: scroll;
+    height: 100%;
+    min-width: 100%;
+    position: fixed;
+    z-index: -2;
+}
+
+/* --------------------------------------------------------------------------- Footer */
+footer {
+    font-size: 20px;
+    background-color: #fff;
+}
+
+/* --------------------------------------------------------------------------- Links & buttons */
 a {
     text-decoration: none;
     color: #fff;
@@ -40,6 +58,16 @@ li {
 }
 
 /* --------------------------------------------------------------------------- Booking Form */
+form {
+
+}
+
+.form-p {
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 36px;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -47,13 +75,11 @@ li {
     justify-content: center;
 }
 
-form {
-}
-
 label, button {
     display: block;
     margin-top: 1em;
     margin-bottom: 4px;
+    font-size: 20px;
 }
 
 label:first-of-type {
@@ -68,4 +94,12 @@ input, select {
 textarea {
     max-height: 4em;
     border: solid 1px;
+}
+
+select {
+    width: 25%;
+}
+
+input, textarea {
+    width: 100%;
 }

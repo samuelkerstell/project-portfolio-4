@@ -14,6 +14,10 @@ from datetime import date
 class HomePage(generic.TemplateView):
     template_name = 'index.html'
 
+
+class MenuPage(generic.TemplateView):
+    template_name = 'menu.html'
+
  
 # View to make a reservation
 class MakeBooking(generic.CreateView, LoginRequiredMixin):

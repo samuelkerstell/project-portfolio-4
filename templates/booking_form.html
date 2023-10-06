@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="bg-image-booking"></div>
 <div class="container">
-    <div class="row">
-        <form method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <h3 class="booking-header">Booking:</h3>
+    <div class="row justify-content-center flex-column flex-md-row custom-margin">
+        <div class="col-md-6 bg-light bg-gradient">
+            <form method="POST" enctype="multipart/form-data" class="m-4">
+                <h3 class="booking-header text-center">Booking</h3>
                 <!-- Security token -->
                 {% csrf_token %}
 
@@ -16,8 +17,18 @@
                     {% endfor %}
                 </ul>
                 <button type="submit" class="btn btn-dark btn-md">Submit</button>
-            </div>
-        </form>
+            </form>
+        </div>
+        <div class="col-md-6 square bg-dark text-light form-p">
+            <h4 class="text-center">Secure your table!</h4>
+            <br>
+            <p>Whether it's a casual lunch or a special occasion, we've got a seat waiting just for you. 
+                Choose the number of guests, preferred time, and date, and feel free to let us know if you 
+                have any special requests or dietary preferences.<br><br> We can't wait to serve you! - <span class="brand">S<span class="red-o">A</span>M<span
+                class="thin"><i class="fas fa-hamburger"></i>burger</span></p>
+                
+        </div>
     </div>
+</div>
 </div>
 {%endblock%}
