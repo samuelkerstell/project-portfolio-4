@@ -8,7 +8,7 @@ body {
 .heading {
     font-size: 48px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
 
 }
@@ -128,3 +128,57 @@ input, textarea {
     font-weight: 600;
 }
 
+/* --------------------------------------------------------------------------- Sign Up, Sign In, Sign Out pages */
+
+.signup>ul {
+    font-size: 16px;
+    padding: 0;
+    color: red;
+}
+
+
+/* --------------------------------------------------------------------------- Media Queries */
+@media screen and (max-width: 990px) {
+    select {
+        width: 60%;
+    }
+
+    .bg-image-booking {
+        background: #ffff;
+    }
+
+    .container {
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .custom-row {
+        margin: 0;
+        border-radius: 0px;
+    }
+
+    .form-p {
+        padding: 0;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .heading {
+        font-size: 32px;
+    }
+
+    .responsive-header {
+        margin-top: 58px;
+    }
+
+    .responsive-header h5 {
+        font-size: 110%;
+        margin-top: 1%;
+    }
+
+    .btn-responsive {
+        font-size: 90%;
+    }
+}
