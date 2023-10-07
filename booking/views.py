@@ -75,7 +75,7 @@ class DeleteBooking(generic.DeleteView, LoginRequiredMixin):
     template_name = "delete_booking.html"
 
     def get_queryset(self):
-        return Booking.objects.filter(pk=self.kwargs['pk'], customer=self.request.user)
+        return get_object_or_404(Booking, pk=self.kwargs['pk'], customer=self.request.user)
 
 
 # View to update existing booking
@@ -86,8 +86,9 @@ class UpdateBooking(generic.UpdateView, LoginRequiredMixin):
     fields = ['guests', 'time', 'day', 'comment']
     success_url = "/booking_details"
 
-    def get_queryset(self):
-        return Booking.objects.filter(pk=self.kwargs['pk'], customer=self.request.user)
+    def get_object(self):
+        #return Booking.objects.filter(pk=self.kwargs['pk'], customer=self.request.user)
+        return get_object_or_404(Booking, pk=self.kwargs['pk'], customer=self.request.user)
 
 
 # Code taken from https://stackoverflow.com/questions/17662928/django-creating-a-custom-500-404-error-page
