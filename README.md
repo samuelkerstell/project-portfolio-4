@@ -181,7 +181,8 @@ I've confirmed that the site is responsive and looks good on different screen si
 
 
 ### Bugs
-* Couldn't get CSS to load on Deployed Heroku app
+* Couldn't get CSS to load on Deployed Heroku app.
+* I fixed this by installing cloudinary which I had forgotten to add.
 
 #### Solved Bugs
 * 
