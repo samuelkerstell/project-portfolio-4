@@ -1,8 +1,9 @@
 # Samburger
 
 ## Welcome to Samburger, we redefine the burger experience in the heart of Gothenburg.
-(The Resturaunt is not actually real)
-[View the live project here](https://project-portfolio-4-sam-335106eed664.herokuapp.com)
+ * [View the live project here](https://project-portfolio-4-sam-335106eed664.herokuapp.com) (The restaurant is not actually real)
+
+
 
 ![Different screen sizes](media/images/ami.png)
 
