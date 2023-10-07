@@ -7,7 +7,81 @@
 
 # UX-Design
 
-## Planning
+## Design Thinking
+When starting this project I knew I wanted a clean modern design. I wanted the site to mirror the resturant, modern. I know I wanted a landing page with a clean looking header. Then I thought of what would a first time visitor want from this site?
+I came up with 5 must have features.
+* Easy access to our menu.
+* A booking page.
+* A booking details page with ability to cancel and update bookings.
+* A navbar to help navigate through the website.
+* Being able to create an account/login to easily view & create bookings.
+
+
+From there I came up with my user stories.
+## User Stories
+* Create A Booking
+  - As a site user I can make a booking so that I can book a specific time.
+* View A Booking
+  - As s site user I can to view my bookings so I can see the date and if I want to cancel or update bookings.
+* Edit A Booking
+  - As a site user I can edit my booking so that I can change the date and time.
+* Cancel A Booking
+  - As a site user I can cancel a booking so I can regret my decision if needed.
+* Account registration
+  - As a Site User I can register an account so that I can create, view and edit a booking.
+* Add Comment
+  - As a Site User I can leave a comment on the booking so that I can let the restaurant know any additional information.
+* View Menu
+  - As a Site User I can view the menu so I can know what they are offering.
+* Navigation
+  - As a Site User I can navigate through the navbar so I can easily navigate through the website.
+* Footer Social Links
+  - As a Site User I can click on social links that I can follow the restaurant on various social media pages.
+
+## Diagram
+I then created my diagram for the booking model I was going to use.
+
+![Diagram](media/images/bookingmodel.png)
+
+## Design
+With the planning and user stories in place I thought of how I want the website to look and work.
+
+#### Landing Page
+* Hero image covering the whole screen in the background.
+* Navbar that includes, register, login, booking details and a menu.
+* Header with a button redirecting to the booking form
+
+#### Menu Page
+* Here I want the user to be able to view our mennu.
+
+#### Booking Page
+* Form where the user inputs amount of guests, time, day and any additional comments. 
+* When submitted I want the user to get a confirmation of the booking and redirected to the booking details page.
+
+#### Booking Details Page
+* Here I want the logged in user to be able to view, update and delete their current bookings.
+
+#### Register Page
+* Here I want the user to be able to create an account to be able to make bookings.
+
+#### Login Page
+* Here I want the user to be able to login to their existing account.
+
+#### Logout Page
+* Here I want the user to be able to logout of their account.
+
+## Fonts & Colors
+
+### Fonts
+When choosing font I just wanted to keep it simple and clean thats why I choose this font:
+- The 'Prompt' font was used for this project from [Google Fonts](https://fonts.google.com)
+
+### Colors
+Same here when choosing colors I just wanted to keep it simple thats why I choose:
+- White - #ffff
+- Dark Grey - #212529
+- Leather Brown - #301606 (Used on the booking form)
+
 
 # Features
 
@@ -94,6 +168,27 @@
     * This is a feature I will definitely add. If I had the time it would've already been added.
     * The user would choose a table based on the available tables in the booking form.
 
+# Technologies Used
+
+## Frameworks, Libraries & Progams Used
+  * [Django](https://www.djangoproject.com) Django served as the foundation of this project, used for the creation of models, forms, and views of the app.
+  * [Cloudinary](https://www.cloudinary.com) Cloudinary was used as free cloud store CSS staticfiles.
+  * [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/) Bootstrap 5.1 enhanced the project's user interface, enabling responsive and visually appealing design.
+  * [ElephantSQL](https://www.elephantsql.com) was chosen for its reliable PostgreSQL database hosting, ensuring efficient data management for the project.
+  * [Google Fonts](https://fonts.google.com) was used to import the 'Prompt' font in the style.css file which is used on all text on the website.
+  * [Git](https://gitpod.io) Git was employed for version control by utilizing the GitPod terminal to commit changes and push them to GitHub.
+  * [GitHub](https://github.com) was used to store the project code after being pushed from gitpod.
+  * [Heroku](https://dashboard.heroku.com/) was used to host the project.
+
+  * [Font Awesome](https://fontawesome.com) was used for fonts on the site.
+  * [ChatGPT](https://chat.openai.com) was used to improve copyright.
+  * [AmIresponsive](https://ui.dev/amiresponsive) was used for the readme pictures to ensure a visually appealing and responsive design presentation in the project documentation.
+  
+ ## Languages Used
+ * HTML5
+ * CSS3
+ * Python3
+
 # Testing
 
 
@@ -126,9 +221,9 @@ The Apple devices tested the site using the following browsers:
 * Safari
 * Google Chrome
 
-
 I've confirmed that the site is responsive and looks good on different screen sizes.
 
+## Manual Testing
 | `Feature` | `Expected Outcome` | `Testing Performance` | `Result` | `Pass/Fail`|
 | ----------|--------------------|-----------------------|----------|------------|
 | `Navbar` |  |
@@ -181,15 +276,11 @@ I've confirmed that the site is responsive and looks good on different screen si
 
 
 ### Bugs
-* Couldn't get CSS to load on Deployed Heroku app.
-* I fixed this by installing cloudinary which I had forgotten to add.
+* No current bugs
 
 #### Solved Bugs
-* 
-
-
-![Bugfix1]()
-
+* Couldn't get CSS to load on Deployed Heroku app.
+* I fixed this by installing cloudinary to store CSS static files.
 
 ## Validation Testing
 * HTML
@@ -201,23 +292,6 @@ I've confirmed that the site is responsive and looks good on different screen si
 * Accessibility
 
 ![Screenshot of the Lighthouse Pagespeed]()
-
-# Technologies Used
-
-## Frameworks, Libraries & Progams Used
-  * [Django](https://www.djangoproject.com) Django served as the foundation of this project, used for the creation of models, forms, and views of the app.
-  * [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/) Bootstrap 5.1 enhanced the project's user interface, enabling responsive and visually appealing design.
-  * [ElephantSQL](https://www.elephantsql.com) was chosen for its reliable PostgreSQL database hosting, ensuring efficient data management for the project.
-  * [Google Fonts](https://fonts.google.com) was used to import the 'Prompt' font in the style.css file which is used on all text on the website.
-  * [Git](https://gitpod.io) Git was employed for version control by utilizing the GitPod terminal to commit changes and push them to GitHub.
-  * [GitHub](https://github.com) was used to store the project code after being pushed from gitpod.
-  * [ChatGPT](https://chat.openai.com) was used to improve copyright.
-  * [AmIresponsive](https://ui.dev/amiresponsive) was used for the readme pictures to ensure a visually appealing and responsive design presentation in the project documentation.
-  
- ## Languages Used
- * HTML5
- * CSS3
- * Python3
 
 # Deployment
 
