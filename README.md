@@ -181,7 +181,7 @@ I've confirmed that the site is responsive and looks good on different screen si
 
 
 ### Bugs
-* 
+* Couldn't get CSS to load on Deployed Heroku app
 
 #### Solved Bugs
 * 
