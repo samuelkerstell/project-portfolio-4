@@ -3,13 +3,17 @@ from datetime import datetime
 from django.contrib.auth.models import User
 
 time_options = (
-    ("09:00", "09:00"),
     ("10:00", "10:00"),
     ("11:00", "11:00"),
     ("12:00", "12:00"),
     ("13:00", "13:00"),
     ("14:00", "14:00"),
     ("15:00", "15:00"),
+    ("16:00", "16:00"),
+    ("17:00", "17:00"),
+    ("18:00", "18:00"),
+    ("19:00", "19:00"),
+    ("20:00", "20:00"),
 )
 
 GUEST_CAPACITY = (
@@ -21,10 +25,13 @@ GUEST_CAPACITY = (
 
 
 class Booking(models.Model):
-    guests = models.CharField(max_length=10, choices=GUEST_CAPACITY, default="1")
+    guests = models.CharField(max_length=10, choices=GUEST_CAPACITY,
+                              default="1")
     day = models.DateField(default=datetime.now)
-    time = models.CharField(max_length=10, choices=time_options, default="09:00")
-    customer = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    time = models.CharField(max_length=10, choices=time_options,
+                            default="09:00")
+    customer = models.ForeignKey(User, on_delete=models.CASCADE, null=True,
+                                 blank=True)
     email = models.EmailField(default="")
     comment = models.TextField(max_length=40, blank=True)
 

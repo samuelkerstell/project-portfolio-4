@@ -1,6 +1,7 @@
 # Samburger
 
 ## Welcome to Samburger, we redefine the burger experience in the heart of Gothenburg.
+(The Resturaunt is not actually real)
 [View the live project here](https://project-portfolio-4-sam-335106eed664.herokuapp.com)
 
 ![Different screen sizes](media/images/ami.png)
@@ -38,7 +39,7 @@ From there I came up with my user stories.
   - As a Site User I can click on social links that I can follow the restaurant on various social media pages.
 
 ## Diagram
-I then created my diagram for the booking model I was going to use.
+I proceeded to create a diagram for the booking model I intended to utilize. This process provided me with a clearer understanding of the requirements for my models.
 
 ![Diagram](media/images/bookingmodel.png)
 

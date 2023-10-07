@@ -30,7 +30,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-samuelkerst-projectport-nwek2ufljfa.ws-eu105.gitpod.io', 'project-portfolio-4-sam-335106eed664.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    '8000-samuelkerst-projectport-nwek2ufljfa.ws-eu105.gitpod.io',
+    'project-portfolio-4-sam-335106eed664.herokuapp.com',
+    'localhost',
+    ]
 
 
 # Application definition
@@ -93,12 +97,12 @@ WSGI_APPLICATION = 'project4.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
