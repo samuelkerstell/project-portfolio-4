@@ -74,7 +74,7 @@ class DeleteBooking(generic.DeleteView, LoginRequiredMixin):
 
     template_name = "delete_booking.html"
 
-    def get_queryset(self):
+    def get_object(self):
         return get_object_or_404(Booking, pk=self.kwargs['pk'], customer=self.request.user)
 
 
