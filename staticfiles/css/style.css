@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+body {
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
+}
+
+.heading {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.custom-margin {
+    margin-top: 116px;
+}
+
+/* --------------------------------------------------------------------------- Images */
+
+
+.bg-image {
+    background: url(https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg) no-repeat center center / cover;
+    height: 95vh;
+}
+
+.bg-image-booking {
+    padding: 0;
+    background: url(
+        https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center center / cover;
+    background-attachment: scroll;
+    height: 100%;
+    min-width: 100%;
+    position: fixed;
+    z-index: -2;
+}
+
+/* --------------------------------------------------------------------------- Footer */
+footer {
+    font-size: 20px;
+    background-color: #fff;
+}
+
+/* --------------------------------------------------------------------------- Links & buttons */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 2px;
+}
+
+/* --------------------------------------------------------------------------- Booking Form */
+form {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.form-color {
+    color: #301606;
+}
+
+.booking-header {
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.custom-row {
+    border: 12px solid #301606;
+    border-radius: 12px;
+}
+
+.form-p {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-top: 1%;
+    padding-left: 1.5em;
+}
+
+label, button {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 4px;
+}
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+input, select {
+    padding: .2.5em;
+    border: solid 1px;
+}
+
+textarea {
+    max-height: 4em;
+    border: solid 1px;
+}
+
+select {
+    width: 25%;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+.bg-color {
+    background-color: #301606;
+}
+
+/* --------------------------------------------------------------------------- Menu */
+.burger {
+    font-size: 170%;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.ingredients {
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------- Sign Up, Sign In, Sign Out pages */
+
+.signup>ul {
+    font-size: 16px;
+    padding: 0;
+    color: red;
+}
+
+
+/* --------------------------------------------------------------------------- Media Queries */
+@media screen and (max-width: 990px) {
+    select {
+        width: 60%;
+    }
+
+    .bg-image-booking {
+        background: #ffff;
+    }
+
+    .container {
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .custom-row {
+        margin: 0;
+        border-radius: 0px;
+    }
+
+    .form-p {
+        padding: 0;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .heading {
+        font-size: 32px;
+    }
+
+    .responsive-header {
+        margin-top: 58px;
+    }
+
+    .responsive-header h5 {
+        font-size: 110%;
+        margin-top: 1%;
+    }
+
+    .btn-responsive {
+        font-size: 90%;
+    }
+}
