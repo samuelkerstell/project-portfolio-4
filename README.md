@@ -3,13 +3,12 @@
 ## Welcome to Samburger, we redefine the burger experience in the heart of Gothenburg.
 [View the live project here](https://project-portfolio-4-sam-335106eed664.herokuapp.com)
 
-![Different screen sizes]()
+![Different screen sizes](media/images/ami.png)
 
 # UX-Design
 
 ## Design Thinking
-When starting this project I knew I wanted a clean modern design. I wanted the site to mirror the resturant, modern. I know I wanted a landing page with a clean looking header. Then I thought of what would a first time visitor want from this site?
-I came up with 5 must have features.
+When I started this project, my goal was to create a modern and user-friendly website that reflects the restaurant's style. I envisioned a clean header on the landing page and thought about what a first-time visitor would need:
 * Easy access to our menu.
 * A booking page.
 * A booking details page with ability to cancel and update bookings.
@@ -22,7 +21,7 @@ From there I came up with my user stories.
 * Create A Booking
   - As a site user I can make a booking so that I can book a specific time.
 * View A Booking
-  - As s site user I can to view my bookings so I can see the date and if I want to cancel or update bookings.
+  - As a site user I can to view my bookings so I can see the date and if I want to cancel or update bookings.
 * Edit A Booking
   - As a site user I can edit my booking so that I can change the date and time.
 * Cancel A Booking
@@ -52,7 +51,7 @@ With the planning and user stories in place I thought of how I want the website 
 * Header with a button redirecting to the booking form
 
 #### Menu Page
-* Here I want the user to be able to view our mennu.
+* Here I want the user to be able to view our menu.
 
 #### Booking Page
 * Form where the user inputs amount of guests, time, day and any additional comments. 
@@ -74,7 +73,7 @@ With the planning and user stories in place I thought of how I want the website 
 
 ### Fonts
 When choosing font I just wanted to keep it simple and clean thats why I choose this font:
-- The 'Prompt' font was used for this project from [Google Fonts](https://fonts.google.com)
+- I used the 'Prompt' font from [Google Fonts](https://fonts.google.com) for this project.
 
 ### Colors
 Same here when choosing colors I just wanted to keep it simple thats why I choose:
@@ -88,8 +87,8 @@ Same here when choosing colors I just wanted to keep it simple thats why I choos
 ## Existing Features
 
 * ### Navbar
-  * Navigation bar includes: Home, Register/Logout, Sign In and Booking Details. These links will redirect to different pages on the website.
-  * Can be seen on all pages, includes the logo and the navigation bar.
+  * The navigation bar includes links to Home, Menu, Register/Logout, Sign In, and Booking Details.
+  * It is visible on all pages and includes the logo and navigation links.
   * The navigation bar is valuable for users as it provides quick and easy access to important sections of the website.
 
 ![Screenshot of the navigation bar.](media/images/navbar.png)
@@ -97,7 +96,7 @@ Same here when choosing colors I just wanted to keep it simple thats why I choos
 * ### Header/Hero Image
   * The "Welcome to Samburger!" header together with the image warmly greets visitors and sets a positive tone for their dining experience.
   * The "Book Now!" button makes it easy for users who are already logged in, allowing them to proceed directly to the booking process.
-  * The "Register To Book A Table!" button makes it clear for the user that you need to register an account before being able to make a booking.
+  * The "Register To Book A Table!" button makes it clear to users that they need to register an account before making a booking.
 
 ![Screenshot of the navigation bar.](media/images/header.png)
 
@@ -165,7 +164,7 @@ Same here when choosing colors I just wanted to keep it simple thats why I choos
 
 ## Future Features
  * ### Choose A Table
-    * This is a feature I will definitely add. If I had the time it would've already been added.
+    * This is a feature I will definitely add. If I had the time, it would have already been added.
     * The user would choose a table based on the available tables in the booking form.
 
 # Technologies Used
@@ -183,6 +182,7 @@ Same here when choosing colors I just wanted to keep it simple thats why I choos
   * [Font Awesome](https://fontawesome.com) was used for fonts on the site.
   * [ChatGPT](https://chat.openai.com) was used to improve copyright.
   * [AmIresponsive](https://ui.dev/amiresponsive) was used for the readme pictures to ensure a visually appealing and responsive design presentation in the project documentation.
+  * [LucidChart](https://lucid.app) was used to create my diagram Booking Model.
   
  ## Languages Used
  * HTML5
@@ -190,7 +190,6 @@ Same here when choosing colors I just wanted to keep it simple thats why I choos
  * Python3
 
 # Testing
-
 
 ## Testing User Stories
 
@@ -227,10 +226,10 @@ I've confirmed that the site is responsive and looks good on different screen si
 | `Feature` | `Expected Outcome` | `Testing Performance` | `Result` | `Pass/Fail`|
 | ----------|--------------------|-----------------------|----------|------------|
 | `Navbar` |  |
-| Logo  | When clicked user will be able redirected to the Home Page. | Clicked on logo | Redirected to the Home Page  | Pass |
-| Home link | When clicked user will be able redirected to the Home Page. | Clicked on Home  | Redirected to the Home Page | Pass |
-| Menu link | When clicked user will be able redirected to the Menu Page. | Clicked on Menu  | Redirected to the Menu Page | Pass |
-| Register link | When clicked user will be able redirected to the Sign Up Page. | Clicked on Register  | Redirected to the Sign Up Page | Pass |
+| Logo  | When clicked user will be able to be redirected to the Home Page. | Clicked on logo | Redirected to the Home Page  | Pass |
+| Home link | When clicked user will be able to be redirected to the Home Page. | Clicked on Home  | Redirected to the Home Page | Pass |
+| Menu link | When clicked user will be able to be redirected to the Menu Page. | Clicked on Menu  | Redirected to the Menu Page | Pass |
+| Register link | When clicked user will be able to be redirected to the Sign Up Page. | Clicked on Register  | Redirected to the Sign Up Page | Pass |
 | Login link | When clicked user will be able redirected to the Sign In Page. | Clicked on Login  | Redirected to the Sign In Page | Pass |
 | Booking Details | When clicked user will be able redirected to the Booking Details Page. | Clicked on Booking Details  | Redirected to the Booking Details Page | Pass |
 | `Header`  | |
@@ -265,9 +264,9 @@ I've confirmed that the site is responsive and looks good on different screen si
 | `Cancel Booking` |
 | Cancel Booking | Booking is canceled | Clicked confirm button | Booking was canceled | Pass |
 | `Cancel Other User Booking` |
-| Enter other user cancel booking url | Redirected to 404 page | Enter url | Redirected to 404 page | Pass |
+| Enter other user cancel booking url | Redirected to the 404 page | Enter url | Redirected to the 404 page | Pass |
 | `Update Other User Booking` |
-| Enter other user update booking url | Redirected to 404 page | Enter url | Redirected to 404 page | Pass |
+| Enter other user update booking url | Redirected to 404 the page | Enter url | Redirected to hte 404 page | Pass |
 | `Footer` |
 | Facebook Link | Redirected to Facebook page | Clicked | Redirected to Facebook page | Pass |
 | Twitter Link | Redirected to Twitter page | Clicked | Redirected to Twitter page | Pass |
@@ -284,14 +283,14 @@ I've confirmed that the site is responsive and looks good on different screen si
 
 ## Validation Testing
 * HTML
-  * No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+  * Some error ocurred when passing through the official [W3C validator](https://validator.w3.org) this is because of Django. Other than that there was no errors.
 * CSS
   * No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
-* JavaScript
-  * No errors were found when passing through the official [(JSHint)](https://jshint.com)
+* Pyhton
+  * No errors were found when passing through the official [(CI Python Linter)](https://pep8ci.herokuapp.com)
 * Accessibility
 
-![Screenshot of the Lighthouse Pagespeed]()
+![Screenshot of the Lighthouse Pagespeed](media/images/lighthouse.png)
 
 # Deployment
 
@@ -326,8 +325,18 @@ These steps ensured that the project was successfully deployed to Heroku.
 The live link can be found here - [Samburger Website](https://project-portfolio-4-sam-335106eed664.herokuapp.com)
 
 # Credits
-## Code Used
- * 
+## Code Used/Inspired
+ * [CreateView](https://www.geeksforgeeks.org/createview-class-based-views-django/?ref=lbp)
+ * [ListView](https://www.geeksforgeeks.org/listview-class-based-views-django/)
+ * [UpdateView](https://www.geeksforgeeks.org/updateview-class-based-views-django/)
+ * [DeleteView](https://www.geeksforgeeks.org/deleteview-class-based-views-django/)
+ * [404 & 500 pages](https://stackoverflow.com/questions/17662928/django-creating-a-custom-500-404-error-page)
+ * [Avoid past booking dates](https://stackoverflow.com/questions/70671189/avoid-booking-past-dates-with-django)
+ * [Unique Together](https://docs.djangoproject.com/en/4.2/ref/models/options/)
+ * [Avoid past booking dates](https://stackoverflow.com/questions/70671189/avoid-booking-past-dates-with-django)
 
 ## Media
-* 
+* Landing Page image from [Pexels](https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg)
+* Booking Page image from [Pexels](https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+* [Favicon](https://www.flaticon.com/free-icon/hamburger_106277)
+* [Favicon Generator](https://realfavicongenerator.net)
